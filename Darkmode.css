@@ -1,0 +1,263 @@
+body.dark-mode {
+    background-color: #0D1B2A; /* Dark blue background */
+    color: #ffffff;
+}
+
+body.dark-mode .navbar {
+    background-color: rgba(0, 27, 42, 0.9); /* Dark blue navbar */
+    /* background-color: transparent; */
+}
+
+body.dark-mode .nav-link {
+    color: #8ecae6; /* Light blue text in dark mode */
+}
+
+body.dark-mode .content h2,
+body.dark-mode .content p {
+    color: #ffffff;
+}
+/* Keep logo white for dark mode (banners 2 and 3) */
+.white-logo {
+    filter: brightness(0) invert(1); /* Inverts the logo to appear white */
+}
+.banner-slider .navbar-brand img {
+    filter: brightness(0) invert(1); /* Ensures the logo appears white */
+}
+
+.navbar-dark-mode {
+    background-color: rgba(0, 27, 42, 0.9) !important; /* Dark blue background */
+    color: #ffffff !important;
+}
+
+.navbar-dark-mode .nav-link {
+    color: #8ecae6 !important; /* Light blue text in dark mode */
+}
+
+/* Overriding the color for logo in dark-mode for banner 2 and 3 */
+.navbar-dark-mode .navbar-brand img.white-logo {
+    filter: brightness(0) invert(1); /* Logo is inverted (white) */
+}
+.about-section {
+    padding: 80px 0;
+    background-color: #1e1e1e; /* Dark background for contrast */
+  }
+  
+  .section-title {
+    margin-bottom: 50px;
+    position: relative;
+  }
+  
+  .section-title img {
+    width: 100px;
+    margin-bottom: 25px;
+  }
+  
+  .section-title h2 {
+    font-size: 40px;
+    color: #ffffff; /* White text for strong contrast */
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    position: relative;
+    z-index: 1;
+    display: inline-block;
+  }
+  
+  .section-title h2:after {
+    content: '';
+    width: 80px;
+    height: 4px;
+    background-color: #ff5a00; /* Retain the accent color */
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  
+  .section-title p {
+    font-size: 20px;
+    color: #cccccc; /* Softer grey for supporting text */
+    max-width: 650px;
+    margin: 0 auto;
+    line-height: 1.8;
+  }
+  
+  .about-img img {
+    width: 100%;
+    border-radius: 15px;
+    box-shadow: 0 10px 20px rgba(255, 255, 255, 0.1); /* Light shadow for depth */
+  }
+  
+  .about-item {
+    margin-bottom: 40px;
+    display: flex;
+    align-items: center;
+  }
+  
+  .ai-icon img {
+    width: 60px;
+    margin-right: 20px;
+    transition: transform 0.3s ease;
+  }
+  
+  .about-item:hover .ai-icon img {
+    transform: scale(1.1);
+  }
+  
+  .ai-text h4 {
+    font-size: 26px;
+    color: #ffffff; /* White text for clear readability */
+    font-weight: 600;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+  }
+  
+  .ai-text p {
+    font-size: 18px;
+    color: #cccccc; /* Supporting text color */
+    line-height: 1.7;
+  }
+  
+  .site-btn {
+    display: inline-block;
+    padding: 15px 35px;
+    background-image: linear-gradient(135deg, #ff5a00, #ff7a33);
+    color: #ffffff;
+    font-size: 18px;
+    border-radius: 50px;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    font-weight: 600;
+    transition: background 0.4s ease, box-shadow 0.4s ease, transform 0.3s ease;
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .site-btn:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 300%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.1); /* Softer highlight effect for dark mode */
+    transition: left 0.5s ease;
+  }
+  
+  .site-btn:hover:before {
+    left: 0;
+  }
+  
+  .site-btn:hover {
+    background-image: linear-gradient(135deg, #e04d00, #ff6a22);
+    box-shadow: 0 8px 25px rgba(255, 255, 255, 0.1);
+    transform: translateY(-5px);
+  }
+  
+  .site-btn:active {
+    transform: translateY(-2px);
+  }
+
+  /* Dark Mode for Programs Section */
+.classes-section {
+  background: #2A2D34; /* Dark grey background for dark mode */
+}
+
+/* Section Title Colors */
+.section-title h2 {
+  color: #ffffff; /* White text color for section titles */
+}
+
+.section-title p {
+  color: #cccccc; /* Softer grey for subtitle */
+}
+
+/* Classes Item Styles */
+.classes-slider .classes-item {
+  background: #3C414C; /* Dark card background */
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5); /* Deeper shadow for depth */
+}
+
+.classes-item h4 a {
+  color: #ffffff; /* White text color for class titles */
+}
+
+.classes-item .ci-metas {
+  color: #b0b3b8; /* Lighter grey for meta text */
+}
+
+.classes-item .ci-metas i {
+  color: #8ecae6; /* Light blue icon color */
+}
+
+.classes-item p {
+  color: #cccccc; /* Softer grey for descriptions */
+}
+
+.classes-item .ci-author p {
+  color: #ff5a00; /* Orange text for author roles */
+}
+
+/* Button Styles */
+.site-btn {
+  background: #ff5a00; /* Orange button color */
+  color: #fff; /* White text for button */
+}
+
+
+/* darkmode.css */
+
+/* General Dark Mode Styles */
+body.dark-mode {
+  background-color: #121212;
+  color: #ffffff;
+}
+
+/* Dark mode for the trainers section */
+body.dark-mode .trainers-section {
+  background-color: #1e1e1e;
+  color: #ffffff;
+}
+
+body.dark-mode .trainers-section .section-title h2 {
+  color: #f5f5f5;
+}
+
+body.dark-mode .trainers-section p {
+  color: #dcdcdc;
+}
+
+body.dark-mode .trainers-section .classes-item {
+  background-color: #2b2b2b;
+  border: 1px solid #444;
+}
+
+body.dark-mode .trainers-section .classes-item h4 a {
+  color: #f5f5f5;
+}
+
+body.dark-mode .trainers-section .classes-item p {
+  color: #cccccc;
+}
+
+body.dark-mode .trainers-section .ci-img img {
+  border: 1px solid #444;
+}
+
+/* Dark mode for the social icons in the trainers section */
+body.dark-mode .trainers-section .social-icons {
+  display: flex;
+  gap: 15px; /* Adds spacing between the icons */
+  justify-content: center; /* Centers the icons */
+  margin-top: 20px; /* Add top margin for extra spacing */
+}
+
+body.dark-mode .trainers-section .social-icons a {
+  color: #ffffff;
+  transition: color 0.3s ease; /* Smooth transition for hover */
+}
+
+body.dark-mode .trainers-section .social-icons a:hover {
+  color: #f39c12; /* Change hover color for contrast */
+}
+

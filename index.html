@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="lightmode.css" id="lightModeStylesheet">
+    <link rel="stylesheet" href="darkmode.css" id="darkModeStylesheet" disabled>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <title>Energifit</title>
+</head>
+
+<body class="light-mode">
+
+    <!-- Navbar -->
+    <nav class="navbar fixed-top navbar-light " id="navbar"> <!-- Initial class for navbar -->
+        <div class="container">
+            <a class="navbar-brand" href="#">
+                <img src="image.png" alt="Energifit" class="logo" id="logo">
+            </a>
+            <div class="navbar-menu">
+                <a class="nav-link" href="#banner">Home</a>
+                <a class="nav-link" href="#about">About</a>
+                <a class="nav-link" href="#programs">Programs</a>
+                <a class="nav-link" href="#trainers">Trainers</a>
+                <a class="nav-link" href="#">Plans</a>
+                <a class="nav-link" href="#">Contact Us</a>
+            </div>
+            <div class="d-flex align-items-center">
+                <!-- Toggle Light/Dark Mode Icon -->
+                <button class="btn mode-toggle" onclick="toggleMode()">
+                    <i id="modeIcon" class="fas fa-moon"></i>
+                </button>
+                <div class="dropdown ms-3">
+                    <button class="btn dropdown-toggle" type="button" id="dropdownMenuButton" data-bs-toggle="dropdown"
+                        aria-expanded="false">
+                        Login/Signup
+                    </button>
+                    <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                        <li><a class="dropdown-item" href="#">Login</a></li>
+                        <li><a class="dropdown-item" href="#">Signup</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Banner Slider -->
+    <div class="banner-slider banner" id="banner"> <!-- Add id="banner" here -->
+        <div class="slides">
+            <div class="slide active" style="background-image: url('banner1.jpg');">
+                <div class="overlay"></div>
+                <div class="content">
+                    <h2>Welcome to Energifit</h2>
+                    <p>Transform your life with fitness</p>
+                </div>
+            </div>
+            <div class="slide" style="background-image: url('banner2.jpg');">
+                <div class="overlay"></div>
+                <div class="content">
+                    <h2>Reach Your Peak Performance</h2>
+                    <p>Our tailored programs are designed for you</p>
+                </div>
+            </div>
+            <div class="slide" style="background-image: url('banner3.jpeg');">
+                <div class="overlay"></div>
+                <div class="content">
+                    <h2>Expert Trainers, Personal Guidance</h2>
+                    <p>Achieve your goals with professional help</p>
+                </div>
+            </div>
+        </div>
+        <button class="prev" onclick="prevSlide()">&#10094;</button>
+        <button class="next" onclick="nextSlide()">&#10095;</button>
+    </div>
+
+
+
+    <!-- About Us -->
+
+    <section class="about-section spad" id="about">
+        <div class="container">
+            <div class="section-title text-center">
+                <h2>Welcome to Energifit</h2>
+                <p>Your gateway to unlocking a healthier, energized lifestyle. We focus on fitness solutions that cater
+                    to your mind, body, and soul, empowering you to achieve your personal fitness goals.</p>
+            </div>
+            <div class="row">
+                <div class="col-lg-6">
+                    <div class="about-img">
+                        <img src="./about.png" alt="Fitness Inspiration">
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="about-item">
+                        <!-- <div class="ai-icon">
+                            <img src="img/icons/about-1.png" alt="">
+                        </div> -->
+                        <div class="ai-text">
+                            <h4>Personalized Fitness Plans</h4>
+                            <p>We design workout and wellness routines that are customized to meet your specific needs,
+                                no matter your fitness level or experience.</p>
+                        </div>
+                    </div>
+                    <div class="about-item">
+                        <!-- <div class="ai-icon">
+                            <img src="img/icons/about-2.png" alt="">
+                        </div> -->
+                        <div class="ai-text">
+                            <h4>Holistic Wellness</h4>
+                            <p>At Energifit, we go beyond physical training, focusing on a holistic approach that
+                                includes mental well-being and overall health rejuvenation.</p>
+                        </div>
+                    </div>
+                    <div class="about-item">
+                        <!-- <div class="ai-icon">
+                            <img src="img/icons/about-3.png" alt="">
+                        </div> -->
+                        <div class="ai-text">
+                            <h4>Achieve Your Best Self</h4>
+                            <p>We’re dedicated to helping you stay motivated and on track to becoming the best version
+                                of yourself, inside and out.</p>
+                        </div>
+                    </div>
+                    <a href="" class="site-btn sb-gradient mt-5">Explore More</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="classes-section spad" id="programs">
+        <div class="container">
+            <div class="section-title text-center">
+                <h2>What We Offer</h2>
+                <p>Achieve your fitness goals with our customized programs, whether it's strength, cardio, or
+                    flexibility!</p>
+            </div>
+            <div class="classes-slider owl-carousel">
+                <!-- Fitness Program Item 1 -->
+                <div class="classes-item">
+                    <div class="ci-img">
+                        <img src="./strength-training.jpg" alt="Strength Training">
+                    </div>
+                    <div class="ci-text">
+                        <h4><a href="#">Strength Training</a></h4>
+
+                        <p>Build muscle and increase strength with this personalized program.</p>
+                    </div>
+                    <div class="ci-bottom">
+                        <div class="ci-author">
+                            <img src="./trainer1.jpg" alt="John Doe">
+                            <div class="author-text">
+                                <h6>John Doe</h6>
+                                <p>Fitness Coach</p>
+                            </div>
+                        </div>
+                        <a href="" class="site-btn sb-gradient">Join Now</a>
+                    </div>
+                </div>
+                <!-- Fitness Program Item 2 -->
+                <div class="classes-item">
+                    <div class="ci-img">
+                        <img src="./yoga-class.jpg" alt="Yoga Classes">
+                    </div>
+                    <div class="ci-text">
+                        <h4><a href="program-details.html">Yoga Therapy</a></h4>
+
+                        <p>Relax, refresh, and renew with our expert-led yoga sessions.</p>
+                    </div>
+                    <div class="ci-bottom">
+                        <div class="ci-author">
+                            <img src="./trainer2.jpg" alt="Jane Doe">
+                            <div class="author-text">
+                                <h6>Jane Doe</h6>
+                                <p>Yoga Instructor</p>
+                            </div>
+                        </div>
+                        <a href="" class="site-btn sb-gradient">Join Now</a>
+                    </div>
+                </div>
+                <!-- Fitness Program Item 3 -->
+                <div class="classes-item">
+                    <div class="ci-img">
+                        <img src="./Hiit.jpg" alt="Cardio Blast">
+                    </div>
+                    <div class="ci-text">
+                        <h4><a href="program-details.html">Cardio Blast</a></h4>
+
+                        <p>Get your heart pumping with our intense cardio sessions.</p>
+                    </div>
+                    <div class="ci-bottom">
+                        <div class="ci-author">
+                            <img src="./trainer3.jpg" alt="Alex Smith">
+                            <div class="author-text">
+                                <h6>Alex Smith</h6>
+                                <p>Cardio Specialist</p>
+                            </div>
+                        </div>
+                        <a href="" class="site-btn sb-gradient">Join Now</a>
+                    </div>
+                </div>
+                <!-- Fitness Program Item 4 -->
+                <div class="classes-item">
+                    <div class="ci-img">
+                        <img src="./pilates.jpg" alt="Pilates Program">
+                    </div>
+                    <div class="ci-text">
+                        <h4><a href="program-details.html">Pilates Training</a></h4>
+
+                        <p>Enhance your core strength and flexibility with our Pilates sessions.</p>
+                    </div>
+                    <div class="ci-bottom">
+                        <div class="ci-author">
+                            <img src="./trainer4.jpg" alt="Emily Stone">
+                            <div class="author-text">
+                                <h6>Emily Stone</h6>
+                                <p>Pilates Instructor</p>
+                            </div>
+                        </div>
+                        <a href="" class="site-btn sb-gradient">Join Now</a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+
+    <section class="trainers-section" id="trainers">
+        <div class="container">
+            <div class="section-title text-center">
+                <h2>Our Trainers</h2>
+                <p>Meet our experienced trainers who will help you achieve your fitness goals.</p>
+            </div>
+    
+            <div class="classes-slider owl-carousel">
+                <div class="classes-item">
+                    <div class="ci-img">
+                        <img src="trainerA.jpg" alt="Trainer 1">
+                    </div>
+                    <h4><a href="#">John Doe</a></h4>
+                    <p>Fitness Coach</p>
+                    <div class="social-icons">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+    
+                <div class="classes-item">
+                    <div class="ci-img">
+                        <img src="trainerB.jpg" alt="Trainer 2">
+                    </div>
+                    <h4><a href="#">Jane Smith</a></h4>
+                    <p>Yoga Instructor</p>
+                    <div class="social-icons">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+    
+                <div class="classes-item">
+                    <div class="ci-img">
+                        <img src="trainerC.jpg" alt="Trainer 3">
+                    </div>
+                    <h4><a href="#">Mike Johnson</a></h4>
+                    <p>Strength Trainer</p>
+                    <div class="social-icons">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+    
+                <div class="classes-item">
+                    <div class="ci-img">
+                        <img src="trainerD.jpg" alt="Trainer 4">
+                    </div>
+                    <h4><a href="#">Emily Davis</a></h4>
+                    <p>Personal Trainer</p>
+                    <div class="social-icons">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+
+
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="script.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+
+    <script>
+        $(document).ready(function () {
+            $('.classes-slider').owlCarousel({
+                items: 3, // Number of items to show
+                loop: true,
+                margin: 30,
+                nav: true,
+                dots: true,
+                autoplay: true,
+                autoplayTimeout: 5000,
+                responsive: {
+                    0: {
+                        items: 1
+                    },
+                    768: {
+                        items: 2
+                    },
+                    992: {
+                        items: 3
+                    }
+                }
+            });
+
+            // Initialization for the trainers section
+            $('.trainers-slider').owlCarousel({
+                items: 3, // Number of items to show
+                loop: true,
+                margin: 30,
+                nav: true,
+                dots: true,
+                autoplay: true,
+                autoplayTimeout: 5000,
+                responsive: {
+                    0: {
+                        items: 1
+                    },
+                    768: {
+                        items: 2
+                    },
+                    992: {
+                        items: 3
+                    }
+                }
+            });
+        });
+    </script>
+
+</body>
+
+</html>
